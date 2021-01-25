@@ -31,6 +31,7 @@ public class EnterData {
         Player_One_Name.setSize(190,30);
         Player_One_Name.setLocation(280,148);
         frame.getContentPane().add(Player_One_Name);
+
 //label player two
         JLabel label_player_Two = new JLabel("ENTER NAME OF SECOND PLAYER: ");
         label_player_Two.setBounds(50, 50, 200, 50);
@@ -82,8 +83,14 @@ public class EnterData {
         submit_btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //get name of players entred and the chosen colors
+                String name1 = Player_One_Name.getText();
+                String name2 = Player_Two_Name.getText();
+                String Color1 = ColorList1.getSelectedItem().toString();
+                String Color2=ColorList2.getSelectedItem().toString();
+                //System.out.println(Color1+"|"+ Color2);
                 new GameFrame();
-                System.out.println("submit");
+                frame.dispose();
             }
         });
 

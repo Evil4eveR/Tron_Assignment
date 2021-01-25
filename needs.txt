@@ -1,0 +1,3 @@
+-creat menu at the top of the frame has restart/ high score / quit
+-then 2 players can play together 
+-and after we can do save data together and show the high score list

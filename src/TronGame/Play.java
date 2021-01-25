@@ -9,10 +9,10 @@ class GamePanel extends JPanel implements ActionListener{
 
     static final int SCREEN_WIDTH = 1000;
     static final int SCREEN_HEIGHT = 600;
-    static final int TRON_ONE = 20;
+    static final int TRON_ONE = 5;
     static final int TRON_TWO = 20;
     static final int GAME_UNITS = (SCREEN_WIDTH*SCREEN_HEIGHT)/(TRON_ONE*TRON_ONE);//tron_one as size
-    static final int DELAY =70;
+    static final int DELAY =10;
     final int x[] = new int[GAME_UNITS];
     final int y[] = new int[GAME_UNITS];
     int TronBody = 6;
@@ -44,7 +44,7 @@ class GamePanel extends JPanel implements ActionListener{
     public void draw(Graphics g) {
 
         if(running) {
-
+//FOR THE GRAP MATRIX
 			for(int i=0;i<SCREEN_WIDTH/TRON_ONE;i++) {
 				g.drawLine(i*TRON_ONE, 0, i*TRON_ONE, SCREEN_HEIGHT);
 				g.drawLine(0, i*TRON_ONE, SCREEN_WIDTH, i*TRON_ONE);
@@ -121,10 +121,10 @@ class GamePanel extends JPanel implements ActionListener{
     }
     public void gameOver(Graphics g) {
         //Score
-        //g.setColor(Color.red);
-        //g.setFont( new Font("Ink Free",Font.BOLD, 40));
-        //FontMetrics metrics1 = getFontMetrics(g.getFont());
-        //g.drawString("Score: "+applesEaten, (SCREEN_WIDTH - metrics1.stringWidth("Score: "+applesEaten))/2, g.getFont().getSize());
+        g.setColor(Color.red);
+        g.setFont( new Font("Ink Free",Font.BOLD, 40));
+        FontMetrics metrics1 = getFontMetrics(g.getFont());
+        g.drawString("Score: "+TronBody, (SCREEN_WIDTH - metrics1.stringWidth("Score: "+TronBody))/2, g.getFont().getSize());
         //Game Over text
         g.setColor(Color.red);
         g.setFont( new Font("Ink Free",Font.BOLD, 75));
