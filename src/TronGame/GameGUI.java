@@ -69,7 +69,6 @@ public class GameGUI {
                 System.exit(1);
             }
         });
-
         frame.setPreferredSize(new Dimension(1080,600));
         frame.setResizable(false);
         frame.pack();

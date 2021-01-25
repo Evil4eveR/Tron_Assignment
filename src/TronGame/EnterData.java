@@ -48,7 +48,7 @@ public class EnterData {
         Player_Two_Name.setLocation(280,238);
         frame.getContentPane().add(Player_Two_Name);
 
-        String ColorStrings[] = { "BlUE", "YELLOW", "RED", "GREEN" };
+        String ColorStrings[] = { "BLUE", "YELLOW", "RED", "GREEN" };
         final JComboBox<String> ColorList1 = new JComboBox <String> (ColorStrings);
         ColorList1.setSize(190,30);
         ColorList1.setLocation(600,148);
@@ -79,17 +79,18 @@ public class EnterData {
                 frame.dispose();
             }
         });
+        //get name of players entred and the chosen colors
+
 
         submit_btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //get name of players entred and the chosen colors
                 String name1 = Player_One_Name.getText();
                 String name2 = Player_Two_Name.getText();
                 String Color1 = ColorList1.getSelectedItem().toString();
                 String Color2=ColorList2.getSelectedItem().toString();
-                //System.out.println(Color1+"|"+ Color2);
-                new GameFrame();
+                System.out.println(name1+"|"+ Color1);
+                new GameFrame(name1,name2,Color1,Color2);
                 frame.dispose();
             }
         });
