@@ -14,8 +14,11 @@ public class GameGUI {
 
     private JFrame frame;//sans Jframe c est tres important pour disgn n import quoi
     //private GameEngine gameArea;
+    JPanel menu;
     // constractor
     public GameGUI () {
+
+        // background
         Image background;//cree noveux image
         background = new ImageIcon("bgd.jpg").getImage();
         //cree noveux frame avec un tittre
@@ -40,6 +43,8 @@ public class GameGUI {
         //frame.add(new JLabel("Hello world"), gbc);
         //frame.add(new JLabel("I'm on top"), gbc);
         //frame.add(new JButton("Clickity-clackity"), gbc);
+
+
         JButton  play_btn =new JButton(new ImageIcon("play_btn.jpg"));
         frame.add(play_btn,gbc);
         JButton  info_btn =new JButton(new ImageIcon("info_btn.jpg"));

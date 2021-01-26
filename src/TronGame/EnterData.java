@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 public class EnterData {
     private JFrame frame;
     public EnterData () {
+
         Image info_bgd;//cree noveux image
         info_bgd = new ImageIcon("input_bgd.jpg").getImage();
         //cree noveux frame avec un tittre
@@ -20,7 +21,7 @@ public class EnterData {
         JLabel label_player_one = new JLabel("ENTER NAME OF FIRST PLAYER: ");
         label_player_one.setBounds(50, 50, 200, 50);
         label_player_one.setSize(205,122);
-        label_player_one.setLocation(50,100);
+        label_player_one.setLocation(50,90);
         label_player_one.setForeground(Color.DARK_GRAY);
         label_player_one.setBackground(Color.WHITE);
         frame.getContentPane().add(label_player_one);
@@ -29,14 +30,14 @@ public class EnterData {
         JTextField Player_One_Name = new JTextField("Player One");
         Player_One_Name.setBounds(50, 50, 200, 50);
         Player_One_Name.setSize(190,30);
-        Player_One_Name.setLocation(280,148);
+        Player_One_Name.setLocation(280,138);
         frame.getContentPane().add(Player_One_Name);
 
 //label player two
         JLabel label_player_Two = new JLabel("ENTER NAME OF SECOND PLAYER: ");
         label_player_Two.setBounds(50, 50, 200, 50);
         label_player_Two.setSize(205,300);
-        label_player_Two.setLocation(50,100);
+        label_player_Two.setLocation(50,90);
         label_player_Two.setForeground(Color.DARK_GRAY);
         label_player_Two.setBackground(Color.WHITE);
         frame.getContentPane().add(label_player_Two);
@@ -45,13 +46,13 @@ public class EnterData {
         JTextField Player_Two_Name = new JTextField("Player Two");
         Player_Two_Name.setBounds(50, 50, 200, 50);
         Player_Two_Name.setSize(190,30);
-        Player_Two_Name.setLocation(280,238);
+        Player_Two_Name.setLocation(280,227);
         frame.getContentPane().add(Player_Two_Name);
 
         String ColorStrings[] = { "BLUE", "YELLOW", "RED", "GREEN" };
         final JComboBox<String> ColorList1 = new JComboBox <String> (ColorStrings);
         ColorList1.setSize(190,30);
-        ColorList1.setLocation(600,148);
+        ColorList1.setLocation(600,140);
         frame.getContentPane().add(ColorList1);
         final JComboBox<String> ColorList2 = new JComboBox <String> (ColorStrings);
         //ColorList.setMaximumSize(ColorList.getPreferredSize()); // added code
@@ -59,7 +60,7 @@ public class EnterData {
         //ColorList.setSelectedIndex(4);
         //ColorList.addActionListener((ActionListener) this);
         ColorList2.setSize(190,30);
-        ColorList2.setLocation(600,238);
+        ColorList2.setLocation(600,230);
         frame.getContentPane().add(ColorList2);
 
 //back button show up to go back
@@ -81,7 +82,23 @@ public class EnterData {
         });
         //get name of players entred and the chosen colors
 
+//menu for the game
+        MenuBar menu1= new MenuBar(frame);
+        //menu game
+       /* JMenuBar menuBar = new JMenuBar();
 
+        JMenu Menu = new JMenu("MENU");
+
+        JMenuItem restart = new JMenuItem("restart");
+        Menu.add(restart);
+        JMenuItem highScore = new JMenuItem("high score");
+        Menu.add(highScore);
+        JMenuItem exit = new JMenuItem("exit");
+        Menu.add(exit);
+        menuBar.add(Menu);
+        frame.add(menuBar);
+        frame.setJMenuBar(menuBar);
+        */
         submit_btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
