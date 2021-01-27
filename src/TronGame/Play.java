@@ -114,6 +114,23 @@ class GamePanel extends JPanel implements ActionListener{
             g.drawString(playerName1+"|score: "+TronBody+"|"+playerName2, (SCREEN_HEIGHT- metrics1.stringWidth("Score: "+TronBody))/2, g.getFont().getSize());
         }else{
             gameOver(g);
+            /*Boolean highScoreClick = true;
+            if(highScoreClick==true){
+                g.setColor(Color.yellow);
+                g.setFont( new Font("Ink Free",Font.BOLD, 30));
+                FontMetrics metrics2 = getFontMetrics(g.getFont());
+                g.drawString( "name of the player/t| Score", (SCREEN_HEIGHT - metrics2.stringWidth("name of the player/t| Score")) / 2, g.getFont().getSize());
+                for(int i=0;i<8;i++) {
+                    g.drawString(playerName1 + "/t| " + TronBody, (SCREEN_HEIGHT - metrics2.stringWidth(playerName1 + "/t| " + TronBody)) / 2, g.getFont().getSize());
+                }
+            }
+            else{
+                g.setColor(Color.MAGENTA);
+                g.setFont( new Font("Ink Free",Font.BOLD, 10));
+                FontMetrics metrics2 = getFontMetrics(g.getFont());
+                g.drawString("there is no Scores Yet,", (SCREEN_HEIGHT- metrics2.stringWidth("there is no scores"))/2, g.getFont().getSize());
+
+            }*/
         }
     }
     public void move(){
