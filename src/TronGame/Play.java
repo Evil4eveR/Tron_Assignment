@@ -11,7 +11,7 @@ class GamePanel extends JPanel implements ActionListener{
     static final int SCREEN_HEIGHT = 600;
     static final int TRON_ONE = 5;//unite
     static final int GAME_UNITS = (SCREEN_WIDTH*SCREEN_HEIGHT)/(TRON_ONE*TRON_ONE);//tron_one as size
-    static final int DELAY =15;
+    static final int DELAY =95;
     final int x[] = new int[GAME_UNITS];
     final int y[] = new int[GAME_UNITS];
 
